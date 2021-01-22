@@ -1,0 +1,23 @@
+{
+  "name": "convertkit-vue",
+  "version": "0.0.0",
+  "description": "Add convertkit forms to Vue applications and websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConvertKit/convertkit-vue.git"
+  },
+  "keywords": [
+    "convertkit",
+    "vue"
+  ],
+  "author": "Joseph Rex <joseph@convertkit.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ConvertKit/convertkit-vue/issues"
+  },
+  "homepage": "https://github.com/ConvertKit/convertkit-vue#readme"
+}
