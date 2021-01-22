@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>ConvertKit React</h1>
-  <img src="https://raw.githubusercontent.com/ConvertKit/convertkit-vue/main/static/convertKit-vue.png" alt="ConvertKit Vue Logo" width="200" height="235" />
+  <h1>ConvertKit Vue</h1>
+  <img src="https://raw.githubusercontent.com/ConvertKit/convertkit-vue/main/static/convertkit-vue.png" alt="ConvertKit Vue Logo" width="200" height="235" />
   <p>Easily plug convertkit forms to your Vue websites.</p>
 </div>
 
