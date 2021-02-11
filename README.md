@@ -4,8 +4,6 @@
   <p>Easily plug convertkit forms to your Vue websites.</p>
 </div>
 
-**NOTE: THIS IS STILL UNDER DEVELOPMENT AND INSTRUCTIONS BELOW MAY NOT WORK AS EXPECTED**
-
 
 ## Setup
 
@@ -23,7 +21,11 @@ yarn add convertkit-vue
 
 ## Demos
 
-View examples on [how to use different templates here](https://codesandbox.io/s/twilight-cookies-ihryz) and [how to style your form with custom styling here](https://codesandbox.io/s/nifty-fog-f8eys)
+### Vue 3
+- [Using different templates](https://codesandbox.io/s/cranky-stallman-ejvwp)
+
+### Vue 2
+- [Using different templates](https://codesandbox.io/s/xenodochial-wiles-k8kk9)
 
 ## Usage
 
