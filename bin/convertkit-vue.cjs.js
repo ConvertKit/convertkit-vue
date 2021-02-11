@@ -155,13 +155,14 @@ function formFormat(format) {
 }
 
 function Form({
-  props
+  props,
+  ...context
 }) {
   console.log({
-    fromThis: this?.template,
-    fromProps: props.template
+    context,
+    props
   });
-  const template = this.template || minimal;
+  const template = props.template || 'minimal';
   const {
     options,
     Template
