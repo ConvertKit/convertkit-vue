@@ -152,28 +152,25 @@ function formFormat(format) {
   }
 }
 
-const Form = {
-  functional: true,
-  render: (h, {
-    props
-  }) => {
-    console.log({
-      fromThis: undefined.template,
-      fromProps: props.template
-    });
-    const template = undefined.template || minimal;
-    const {
-      options,
-      Template
-    } = useTemplate();
-    return h(Template, helper([{}, props, {
-      "attrs": {
-        "options": options,
-        "format": formFormat(props.format)
-      }
-    }]));
-  }
-};
+function Form({
+  props
+}) {
+  console.log({
+    fromThis: this?.template,
+    fromProps: props.template
+  });
+  const template = this.template || minimal;
+  const {
+    options,
+    Template
+  } = useTemplate();
+  return h(Template, helper([{}, props, {
+    "attrs": {
+      "options": options,
+      "format": formFormat(props.format)
+    }
+  }]));
+}
 
 const ConvertKitForm = {
   functional: true,
