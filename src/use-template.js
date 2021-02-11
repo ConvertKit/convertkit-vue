@@ -84,7 +84,15 @@ const options = {
 //   return allTemplates[templateName]
 // }
 
-const SampleTemplate = () => (<h1>Sample Template</h1>)
+const SampleTemplate = ({ formId, action }) => (
+  <div>
+    <h1>Sample Template: {formId}</h1>
+    <form action={action}>
+      <label>Email</label>
+      <input type="email" />
+    </form>
+  </div>
+)
 
 const useTemplate = () => ({
   options,

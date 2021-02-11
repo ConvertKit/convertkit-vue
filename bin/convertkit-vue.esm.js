@@ -117,7 +117,18 @@ const options = {
 
 const SampleTemplate = {
   functional: true,
-  render: h => h("h1", ["Sample Template"])
+  render: (h, {
+    formId,
+    action
+  }) => h("div", [h("h1", ["Sample Template: ", formId]), h("form", {
+    "attrs": {
+      "action": action
+    }
+  }, [h("label", ["Email"]), h("input", {
+    "attrs": {
+      "type": "email"
+    }
+  })])])
 };
 
 const useTemplate = () => ({
