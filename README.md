@@ -4,7 +4,7 @@
   <p>Easily plug convertkit forms to your Vue websites.</p>
 </div>
 
-**NOTE: THIS IS STILL UNDER DEVELOPMENT AND INSTRUCTIONS BELOW MAY NOT WoRK AS EXPECTED**
+**NOTE: THIS IS STILL UNDER DEVELOPMENT AND INSTRUCTIONS BELOW MAY NOT WORK AS EXPECTED**
 
 
 ## Setup
@@ -52,10 +52,11 @@ Here you'll pick out your form id from the form action in the embed code:
 
 ```vue
 <template>
-  <ConvertKitForm {...config} />
+  <ConvertKitForm v-bind="config" />
 </template>
 <script>
 import ConvertKitForm from 'convertkit-vue'
+
 export default {
   name: "My Vue App",
   components: { ConvertKitForm },
