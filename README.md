@@ -9,6 +9,8 @@
 
 ## Setup
 
+For Vue 3:
+
 ```sh
 yarn add convertkit-vue@next
 ```
