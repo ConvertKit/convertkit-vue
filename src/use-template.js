@@ -84,15 +84,18 @@ const options = {
 //   return allTemplates[templateName]
 // }
 
-const SampleTemplate = ({ formId, action }) => (
-  <div>
-    <h1>Sample Template: {formId}</h1>
-    <form action={action}>
-      <label>Email</label>
-      <input type="email" />
-    </form>
-  </div>
-)
+const SampleTemplate = (context) => {
+  console.log({ context })
+  return (
+    <div>
+      <h1>Sample Template: {JSON.stringify(context)}</h1>
+      <form action>
+        <label>Email</label>
+        <input type="email" />
+      </form>
+    </div>
+  )
+}
 
 const useTemplate = () => ({
   options,

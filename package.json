@@ -1,6 +1,6 @@
 {
   "name": "convertkit-vue",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Add convertkit forms to Vue applications and websites",
   "main": "bin/convertkit-vue.cjs.js",
   "module": "bin/convertkit-vue.esm.js",
