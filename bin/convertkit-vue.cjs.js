@@ -111,144 +111,136 @@ function BuiltWith({
 
 const ALLOWED_FORMATS = ['inline', 'modal', 'slide in'];
 const bgImage = '//pages.convertkit.com/assets/charlotte/bg.jpg';
-var Charlotte = {
-  mounted() {
-    const script = document.createElement('script');
-    script.src = 'https://f.convertkit.com/ckjs/ck.5.js';
-    script.async = true;
-    document.body.appendChild(script);
-  },
 
-  render() {
-    const action = this.action;
-    const formId = this.formId;
-    const options = this.options || {};
-    const hideName = this.hideName || true;
-    const showLabels = this.showLabels || false;
-    const newTab = this.newTab || false;
-    const hideWarnings = this.hideWarnings || false;
-    const className = this.className || '';
-    const submitText = this.submitText || 'Send me the guide';
-    const disclaimerText = this.disclaimerText || 'We respect your privacy, Unsubscribe at any time.';
-    const emailPlaceholder = this.emailPlaceholder || 'Your email';
-    const namePlaceholder = this.namePlaceholder || 'Your first name';
-    const nameLabel = this.nameLabel || 'First name';
-    const emailLabel = this.emailLabel || 'Email';
-    const headingText = this.headingText || 'Get our how to guide';
-    const format = this.format || 'inline';
-    const backgroundImage = this.backgroundImage || bgImage;
-    return vue.createVNode(vue.Fragment, null, [!hideWarnings && !ALLOWED_FORMATS.includes(format) ? vue.createVNode(Warning, {
-      "message": "This template is not available for the chosen format"
-    }, null) : null, vue.createVNode("form", {
-      "action": action,
-      "className": `seva-form formkit-form charlotte ${className}`,
-      "method": "post",
-      "target": newTab ? '_blank' : '_self',
-      "data-sv-form": formId,
-      "data-uid": options.uid,
-      "data-format": format,
-      "data-version": options.version,
-      "data-options": JSON.stringify(options),
-      "min-width": "400 500 600 700 800",
-      "style": {
-        backgroundColor: 'rgb(255, 255, 255)',
-        borderRadius: '6px'
-      }
-    }, [vue.createVNode("div", {
-      "data-style": "full"
-    }, [vue.createVNode("div", {
-      "data-element": "column",
-      "className": "formkit-background",
-      "style": {
-        backgroundImage: `url(${backgroundImage})`
-      }
-    }, null), vue.createVNode("div", {
-      "data-element": "column",
-      "className": "formkit-column"
-    }, [vue.createVNode("div", {
-      "className": "formkit-header",
-      "data-element": "header",
-      "style": {
-        color: 'rgb(83, 83, 83)',
-        fontSize: '28px',
-        fontWeight: 700
-      }
-    }, [vue.createVNode("h1", null, [headingText])]), vue.createVNode("ul", {
-      "className": "formkit-alert formkit-alert-error",
-      "data-element": "errors",
-      "data-group": "alert"
-    }, null), vue.createVNode("div", {
-      "data-element": "fields",
-      "className": "seva-fields formkit-fields"
-    }, [!hideName && vue.createVNode(vue.Fragment, null, [showLabels ? vue.createVNode("label", {
-      "htmlFor": "ck-first-name"
-    }, [nameLabel]) : null, vue.createVNode("div", {
-      "className": "formkit-field"
-    }, [vue.createVNode("input", {
-      "className": "formkit-input",
-      "aria-label": nameLabel,
-      "name": "fields[first_name]",
-      "placeholder": namePlaceholder,
-      "type": "text",
-      "style": {
-        color: 'rgb(139, 139, 139)',
-        borderColor: 'rgb(221, 224, 228)',
-        fontWeight: 400,
-        borderLeft: 0,
-        borderRight: 0,
-        borderTop: 0,
-        paddingLeft: 0,
-        paddingRight: 0
-      },
-      "id": "ck-first-name"
-    }, null)])]), showLabels ? vue.createVNode("label", {
-      "htmlFor": "ck-email"
-    }, [emailLabel]) : null, vue.createVNode("div", {
-      "className": "formkit-field"
-    }, [vue.createVNode("input", {
-      "className": "formkit-input",
-      "aria-label": emailLabel,
-      "name": "email_address",
-      "placeholder": emailPlaceholder,
-      "required": true,
-      "type": "email",
-      "style": {
-        color: 'rgb(139, 139, 139)',
-        borderColor: 'rgb(221, 224, 228)',
-        fontWeight: 400,
-        borderLeft: 0,
-        borderRight: 0,
-        borderTop: 0,
-        paddingLeft: 0,
-        paddingRight: 0
-      },
-      "id": "ck-email"
-    }, null)]), vue.createVNode("button", {
-      "data-element": "submit",
-      "className": "formkit-submit",
-      "style": {
-        width: '100%',
-        color: 'rgb(255, 255, 255)',
-        backgroundColor: 'rgb(246, 166, 171)',
-        borderRadius: '3px',
-        fontWeight: 700
-      }
-    }, [vue.createVNode("div", {
-      "className": "formkit-spinner"
-    }, [vue.createVNode("div", null, null), vue.createVNode("div", null, null), vue.createVNode("div", null, null)]), vue.createVNode("span", null, [submitText])])]), vue.createVNode("div", {
-      "className": "formkit-disclaimer",
-      "data-element": "disclaimer",
-      "style": {
-        color: 'rgb(139, 139, 139)',
-        fontSize: '13px'
-      }
-    }, [disclaimerText]), options.settings.powered_by.show ? vue.createVNode(BuiltWith, {
-      "href": options.settings.powered_by.url,
-      "data-variant": "dark"
-    }, null) : null])])])]);
-  }
-
-};
+function Charlotte({
+  action,
+  formId,
+  options,
+  hideName = true,
+  showLabels = false,
+  newTab = false,
+  hideWarnings = false,
+  className = '',
+  submitText = 'Send me the guide',
+  disclaimerText = 'We respect your privacy. Unsubscribe at any time.',
+  emailPlaceholder = 'Your email',
+  namePlaceholder = 'Your first name',
+  nameLabel = 'First name',
+  emailLabel = 'Email',
+  headingText = 'Get our how to guide',
+  format = 'inline',
+  backgroundImage = bgImage
+}) {
+  return vue.createVNode(vue.Fragment, null, [!hideWarnings && !ALLOWED_FORMATS.includes(format) ? vue.createVNode(Warning, {
+    "message": "This template is not available for the chosen format"
+  }, null) : null, vue.createVNode("form", {
+    "action": action,
+    "className": `seva-form formkit-form charlotte ${className}`,
+    "method": "post",
+    "target": newTab ? '_blank' : '_self',
+    "data-sv-form": formId,
+    "data-uid": options.uid,
+    "data-format": format,
+    "data-version": options.version,
+    "data-options": JSON.stringify(options),
+    "min-width": "400 500 600 700 800",
+    "style": {
+      backgroundColor: 'rgb(255, 255, 255)',
+      borderRadius: '6px'
+    }
+  }, [vue.createVNode("div", {
+    "data-style": "full"
+  }, [vue.createVNode("div", {
+    "data-element": "column",
+    "className": "formkit-background",
+    "style": {
+      backgroundImage: `url(${backgroundImage})`
+    }
+  }, null), vue.createVNode("div", {
+    "data-element": "column",
+    "className": "formkit-column"
+  }, [vue.createVNode("div", {
+    "className": "formkit-header",
+    "data-element": "header",
+    "style": {
+      color: 'rgb(83, 83, 83)',
+      fontSize: '28px',
+      fontWeight: 700
+    }
+  }, [vue.createVNode("h1", null, [headingText])]), vue.createVNode("ul", {
+    "className": "formkit-alert formkit-alert-error",
+    "data-element": "errors",
+    "data-group": "alert"
+  }, null), vue.createVNode("div", {
+    "data-element": "fields",
+    "className": "seva-fields formkit-fields"
+  }, [!hideName && vue.createVNode(vue.Fragment, null, [showLabels ? vue.createVNode("label", {
+    "htmlFor": "ck-first-name"
+  }, [nameLabel]) : null, vue.createVNode("div", {
+    "className": "formkit-field"
+  }, [vue.createVNode("input", {
+    "className": "formkit-input",
+    "aria-label": nameLabel,
+    "name": "fields[first_name]",
+    "placeholder": namePlaceholder,
+    "type": "text",
+    "style": {
+      color: 'rgb(139, 139, 139)',
+      borderColor: 'rgb(221, 224, 228)',
+      fontWeight: 400,
+      borderLeft: 0,
+      borderRight: 0,
+      borderTop: 0,
+      paddingLeft: 0,
+      paddingRight: 0
+    },
+    "id": "ck-first-name"
+  }, null)])]), showLabels ? vue.createVNode("label", {
+    "htmlFor": "ck-email"
+  }, [emailLabel]) : null, vue.createVNode("div", {
+    "className": "formkit-field"
+  }, [vue.createVNode("input", {
+    "className": "formkit-input",
+    "aria-label": emailLabel,
+    "name": "email_address",
+    "placeholder": emailPlaceholder,
+    "required": true,
+    "type": "email",
+    "style": {
+      color: 'rgb(139, 139, 139)',
+      borderColor: 'rgb(221, 224, 228)',
+      fontWeight: 400,
+      borderLeft: 0,
+      borderRight: 0,
+      borderTop: 0,
+      paddingLeft: 0,
+      paddingRight: 0
+    },
+    "id": "ck-email"
+  }, null)]), vue.createVNode("button", {
+    "data-element": "submit",
+    "className": "formkit-submit",
+    "style": {
+      width: '100%',
+      color: 'rgb(255, 255, 255)',
+      backgroundColor: 'rgb(246, 166, 171)',
+      borderRadius: '3px',
+      fontWeight: 700
+    }
+  }, [vue.createVNode("div", {
+    "className": "formkit-spinner"
+  }, [vue.createVNode("div", null, null), vue.createVNode("div", null, null), vue.createVNode("div", null, null)]), vue.createVNode("span", null, [submitText])])]), vue.createVNode("div", {
+    "className": "formkit-disclaimer",
+    "data-element": "disclaimer",
+    "style": {
+      color: 'rgb(139, 139, 139)',
+      fontSize: '13px'
+    }
+  }, [disclaimerText]), options.settings.powered_by.show ? vue.createVNode(BuiltWith, {
+    "href": options.settings.powered_by.url,
+    "data-variant": "dark"
+  }, null) : null])])])]);
+}
 
 // import Cocoa from './templates/cocoa'
 // import Mills from './templates/mills'
@@ -371,10 +363,14 @@ const ConvertKitForm = ({
   ...props
 }) => {
   const action = `https://app.convertkit.com/forms/${formId}/subscriptions`;
-  return vue.createVNode(Form, vue.mergeProps(props, {
+  return vue.createVNode(vue.Fragment, null, [vue.createVNode(Form, vue.mergeProps(props, {
     "action": action,
     "formId": formId
-  }), null);
+  }), null), vue.createVNode("script", {
+    "src": "https://f.convertkit.com/ckjs/ck.5.js",
+    "defer": true,
+    "async": true
+  }, null)]);
 };
 
 module.exports = ConvertKitForm;
