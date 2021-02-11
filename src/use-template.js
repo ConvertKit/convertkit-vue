@@ -1,7 +1,3 @@
-'use strict';
-
-var vue = require('vue');
-
 const options = {
   settings: {
     after_subscribe: {
@@ -52,53 +48,20 @@ const options = {
   },
   uid: '',
   version: '5'
-};
+}
 
-const SampleTemplate = props => vue.createVNode("div", null, [vue.createVNode("h1", null, [vue.createTextVNode("Form Template")]), vue.createVNode("form", {
-  "action": props.action
-}, [vue.createVNode("label", null, [vue.createTextVNode("Email")])])]);
+const SampleTemplate = (props) => (
+  <div>
+    <h1>Form Template</h1>
+    <form action={props.action}>
+      <label>Email</label>
+    </form>
+  </div>
+)
 
 const useTemplate = () => ({
   options,
   Template: SampleTemplate
-});
+})
 
-function formFormat(format) {
-  switch (format) {
-    case 'slidein':
-      return 'slide in';
-
-    case 'sticky':
-      return 'sticky bar';
-
-    default:
-      return format;
-  }
-}
-
-const Form = ({
-  template = 'minimal',
-  format,
-  ...props
-}) => {
-  const {
-    options,
-    Template
-  } = useTemplate();
-  return vue.createVNode(Template, vue.mergeProps(props, options, {
-    "format": formFormat(format)
-  }), null);
-};
-
-const ConvertKitForm = ({
-  formId,
-  ...props
-}) => {
-  const action = `https://app.convertkit.com/forms/${formId}/subscriptions`;
-  return vue.createVNode(Form, vue.mergeProps(props, {
-    "action": action,
-    "formId": formId
-  }), null);
-};
-
-module.exports = ConvertKitForm;
+export default useTemplate

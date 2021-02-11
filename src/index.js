@@ -1,11 +1,8 @@
-const ConvertKitForm = ({ formId }) => {
+import Form from './form'
+
+const ConvertKitForm = ({ formId, ...props }) => {
   const action = `https://app.convertkit.com/forms/${formId}/subscriptions`
-  return (
-    <form action={action}>
-      <label>Email</label>
-      <input type="email" />
-    </form>
-  )
+  return <Form {...props} action={action} formId={formId} />
 }
 
 export default ConvertKitForm
