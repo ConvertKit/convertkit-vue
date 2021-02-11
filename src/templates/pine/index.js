@@ -1,7 +1,6 @@
 import './pine-styles.css'
 import Warning from '../../warning'
 import BuiltWithBadge from '../../BuiltWithBadge'
-import useScript from '../../use-script'
 
 const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
@@ -32,7 +31,6 @@ function Pine({
 }) {
 
   const background = backgroundImage ? `linear-gradient(rgb(249 250 251/.8),rgb(249 250 251/.8)), url(${backgroundImage})` : 'rgb(249 250 251)'
-  useScript('https://f.convertkit.com/ckjs/ck.5.js')
 
   return (
     <>

@@ -1,7 +1,6 @@
 import './powell-styles.css'
 import Warning from '../../warning'
 import BuiltWithBadge from '../../BuiltWithBadge'
-import useScript from '../../use-script'
 
 const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
@@ -34,8 +33,6 @@ function Powell({
   children = <DefaultContent />
 }) {
   const bgColor = backgroundColor.join(' ').concat(`/${backgroundOpacity}`)
-
-  useScript('https://f.convertkit.com/ckjs/ck.5.js')
 
   return (
     <>

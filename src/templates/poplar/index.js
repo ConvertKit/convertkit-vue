@@ -1,7 +1,6 @@
 import './poplar-styles.css'
 import Warning from '../../warning'
 import BuiltWithBadge from '../../BuiltWithBadge'
-import useScript from '../../use-script'
 
 const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
@@ -37,8 +36,6 @@ function Poplar({
   borderRadius = 5
 }) {
   const formRadius = `${borderRadius}px`
-
-  useScript('https://f.convertkit.com/ckjs/ck.5.js')
 
   return (
     <>
