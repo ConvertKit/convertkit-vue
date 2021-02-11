@@ -16,16 +16,22 @@ View examples on [how to use different templates here](https://codesandbox.io/s/
 
 ## Usage
 
-```jsx
+```vue
+<template>
+  <ConvertKitForm formId={1234567} />
+</template>
+
+<script>
 import ConvertKitForm from 'convertkit-vue'
 
 const MY_FORM_ID = 1234567
-
-function HomePage() {
-  return (
-    <ConvertKitForm formId={MY_FORM_ID} />
-  )
+export default {
+  name: "My Vue App",
+  components: {
+    ConvertKitForm
+  }
 }
+</script>
 ```
 
 To get your form id, go to the form you have created on convertkit and choose the HTML embed option.
@@ -33,12 +39,6 @@ To get your form id, go to the form you have created on convertkit and choose th
 ![form embed screenshot](https://raw.githubusercontent.com/ConvertKit/convertkit-react/main/static/embed-screenshot.png)
 
 Here you'll pick out your form id from the form action in the embed code:
-
-```html
-<form
-  action="https://app.convertkit.com/forms/YOUR_FORM_ID_IS_HERE/subscriptions"
-></form>
-```
 
 #### Passing custom configuration options
 
@@ -88,7 +88,7 @@ To change the subheader (sometimes referred to as content) you may just add chil
 inside the `<ConvertkitForm>` component like below:
 
 ```jsx
-<ConvertKitForm {...config}>
+<ConvertKitForm>
   <p>Subscribe to get our latest content by email.</p>
 </ConvertKitForm>
 ```
