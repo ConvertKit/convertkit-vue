@@ -121,7 +121,7 @@ const SampleTemplate = {
     console.log({
       context
     });
-    return h("div", [h("h1", ["Sample Template: ", JSON.stringify(context)]), h("form", {
+    return h("div", [h("h1", ["Sample Template"]), h("form", {
       "attrs": {
         "action": true
       }

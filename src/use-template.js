@@ -88,7 +88,7 @@ const SampleTemplate = (context) => {
   console.log({ context })
   return (
     <div>
-      <h1>Sample Template: {JSON.stringify(context)}</h1>
+      <h1>Sample Template</h1>
       <form action>
         <label>Email</label>
         <input type="email" />
