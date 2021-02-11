@@ -1,3 +1,14 @@
+import Minimal from './templates/minimal'
+import Charlotte from './templates/charlotte'
+// import Clare from './templates/clare'
+// import Cocoa from './templates/cocoa'
+// import Mills from './templates/mills'
+// import Monterey from './templates/monterey'
+// import Pine from './templates/pine'
+// import Poplar from './templates/poplar'
+// import Powell from './templates/powell'
+// import Rainier from './templates/rainier'
+
 const options = {
   settings: {
     after_subscribe: {
@@ -50,18 +61,32 @@ const options = {
   version: '5'
 }
 
-const SampleTemplate = (props) => (
-  <div>
-    <h1>Form Template</h1>
-    <form action={props.action}>
-      <label>Email</label>
-    </form>
-  </div>
-)
+const renderTemplate = template => {
+  const templateName = template.toLowerCase()
+  const allTemplates = {
+    minimal: Minimal,
+    charlotte: Charlotte,
+    // clare: Clare,
+    // cocoa: Cocoa,
+    // mills: Mills,
+    // monterey: Monterey,
+    // pine: Pine,
+    // poplar: Poplar,
+    // powell: Powell,
+    // rainier: Rainier,
+  }
 
-const useTemplate = () => ({
+  if (!allTemplates.hasOwnProperty(templateName)) {
+    const errorMessage = `The chosen template "${template}" is not yet supported`
+    throw new ReferenceError(errorMessage)
+  }
+
+  return allTemplates[templateName]
+}
+
+const useTemplate = (template) => ({
   options,
-  Template: SampleTemplate
+  Template: renderTemplate(template)
 })
 
 export default useTemplate
