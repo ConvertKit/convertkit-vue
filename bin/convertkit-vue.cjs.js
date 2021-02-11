@@ -3,9 +3,9 @@
 const ConvertKitForm = {
   functional: true,
   render: (h, {
-    formId
+    props
   }) => {
-    const action = `https://app.convertkit.com/forms/${formId}/subscriptions`;
+    const action = `https://app.convertkit.com/forms/${props.formId}/subscriptions`;
     return h("form", {
       "attrs": {
         "action": action

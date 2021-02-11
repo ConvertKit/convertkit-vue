@@ -1,5 +1,5 @@
-const ConvertKitForm = ({ formId }) => {
-  const action = `https://app.convertkit.com/forms/${formId}/subscriptions`
+const ConvertKitForm = ({ props }) => {
+  const action = `https://app.convertkit.com/forms/${props.formId}/subscriptions`
   return (
     <form action={action}>
       <label>Email</label>
