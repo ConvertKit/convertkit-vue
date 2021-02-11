@@ -1,6 +1,6 @@
 {
   "name": "convertkit-vue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add convertkit forms to Vue applications and websites",
   "main": "bin/convertkit-vue.cjs.js",
   "module": "bin/convertkit-vue.esm.js",
@@ -22,7 +22,9 @@
     "url": "https://github.com/ConvertKit/convertkit-vue/issues"
   },
   "homepage": "https://github.com/ConvertKit/convertkit-vue#readme",
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^3.0.5"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.13",
     "@babel/plugin-transform-runtime": "^7.12.15",
@@ -32,6 +34,7 @@
     "@rollup/plugin-node-resolve": "^11.1.1",
     "@testing-library/vue": "^5.6.1",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
+    "@vue/babel-plugin-jsx": "^1.0.3",
     "@vue/babel-preset-jsx": "^1.2.4",
     "@vue/babel-sugar-composition-api-inject-h": "^1.2.1",
     "@vue/babel-sugar-composition-api-render-instance": "^1.2.4",

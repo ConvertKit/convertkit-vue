@@ -4,7 +4,7 @@ import commonjs from '@rollup/plugin-commonjs'
 // import styles from 'rollup-plugin-styles'
 
 export default {
-  external: ['react'],
+  external: ['vue'],
   input: 'src/index.js',
   output: [
     { file: 'bin/convertkit-vue.esm.js', format: 'es' },
