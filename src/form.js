@@ -11,13 +11,11 @@ function formFormat(format) {
   }
 }
 
-const Form = ({
-  template = 'minimal',
-  format,
-  ...props
-}) => {
+const Form = ({ props }) => {
+  console.log({ fromThis: this.template, fromProps: props.template })
+  const template = this.template || minimal
   const { options, Template } = useTemplate(template)
-  return <Template {...props} options={options} format={formFormat(format)} />
+  return <Template {...props} options={options} format={formFormat(props.format)} />
 }
 
 export default Form

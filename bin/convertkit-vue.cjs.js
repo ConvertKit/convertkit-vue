@@ -157,10 +157,13 @@ function formFormat(format) {
 const Form = {
   functional: true,
   render: (h, {
-    template = 'minimal',
-    format,
-    ...props
+    props
   }) => {
+    console.log({
+      fromThis: undefined.template,
+      fromProps: props.template
+    });
+    const template = undefined.template || minimal;
     const {
       options,
       Template
@@ -168,7 +171,7 @@ const Form = {
     return h(Template, helper([{}, props, {
       "attrs": {
         "options": options,
-        "format": formFormat(format)
+        "format": formFormat(props.format)
       }
     }]));
   }
