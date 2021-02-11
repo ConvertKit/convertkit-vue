@@ -18,6 +18,6 @@ export default {
     commonjs({
       include: /node_modules/
     }),
-    babel({ babelHelpers: 'bundled' }),
+    babel({ babelHelpers: 'runtime' }),
   ]
 }
