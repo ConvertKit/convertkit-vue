@@ -16,6 +16,7 @@ export default {
   render() {
     const action = this.action
     const formId = this.formId
+    const options = this.options
     const hideName = this.hideName || true
     const showLabels = this.showLabels || false
     const newTab = this.newTab || false

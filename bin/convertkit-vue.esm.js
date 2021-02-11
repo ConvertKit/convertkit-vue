@@ -120,6 +120,7 @@ var Charlotte = {
   render() {
     const action = this.action;
     const formId = this.formId;
+    const options = this.options;
     const hideName = this.hideName || true;
     const showLabels = this.showLabels || false;
     const newTab = this.newTab || false;
@@ -255,7 +256,7 @@ var Charlotte = {
 // import Powell from './templates/powell'
 // import Rainier from './templates/rainier'
 
-const options$1 = {
+const options = {
   settings: {
     after_subscribe: {
       action: 'message',
@@ -331,7 +332,7 @@ const renderTemplate = template => {
 };
 
 const useTemplate = template => ({
-  options: options$1,
+  options,
   Template: renderTemplate(template)
 });
 
@@ -357,7 +358,8 @@ const Form = ({
     options,
     Template
   } = useTemplate(template);
-  return createVNode(Template, mergeProps(props, options, {
+  return createVNode(Template, mergeProps(props, {
+    "options": options,
     "format": formFormat(format)
   }), null);
 };

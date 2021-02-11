@@ -17,7 +17,7 @@ const Form = ({
   ...props
 }) => {
   const { options, Template } = useTemplate(template)
-  return <Template {...props} {...options} format={formFormat(format)} />
+  return <Template {...props} options={options} format={formFormat(format)} />
 }
 
 export default Form
