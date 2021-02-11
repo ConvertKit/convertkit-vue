@@ -8,4 +8,4 @@ git commit -m "$2"
 git tag -a "v$1" -m "$2"
 git push origin --tags
 git push origin main
-npm publish
+npm publish --tag next
