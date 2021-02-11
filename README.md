@@ -4,7 +4,16 @@
   <p>Easily plug convertkit forms to your Vue websites.</p>
 </div>
 
+**NOTE: THIS IS STILL UNDER DEVELOPMENT AND INSTRUCTIONS BELOW MAY NOT WoRK AS EXPECTED**
+
+
 ## Setup
+
+```sh
+yarn add convertkit-vue@next
+```
+
+For Vue 2:
 
 ```sh
 yarn add convertkit-vue
@@ -24,12 +33,9 @@ View examples on [how to use different templates here](https://codesandbox.io/s/
 <script>
 import ConvertKitForm from 'convertkit-vue'
 
-const MY_FORM_ID = 1234567
 export default {
   name: "My Vue App",
-  components: {
-    ConvertKitForm
-  }
+  components: { ConvertKitForm }
 }
 </script>
 ```
@@ -42,19 +48,27 @@ Here you'll pick out your form id from the form action in the embed code:
 
 #### Passing custom configuration options
 
-```jsx
-function HomePage() {
-  const config = {
-    formId: MY_FORM_ID,
-    template: 'mills',
-    emailPlaceholder: 'Enter an email address',
-    submitText: 'Sign up',
+```vue
+<template>
+  <ConvertKitForm {...config} />
+</template>
+<script>
+import ConvertKitForm from 'convertkit-vue'
+export default {
+  name: "My Vue App",
+  components: { ConvertKitForm },
+  data() {
+    return {
+      config: {
+        formId: 1234567,
+        template: 'mills',
+        emailPlaceholder: 'Enter an email address',
+        submitText: 'Sign up'
+      }
+    }
   }
-
-  return (
-    <ConvertKitForm {...config} />
-  )
 }
+</script>
 ```
 
 #### Configuration Options
