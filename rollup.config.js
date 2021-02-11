@@ -1,7 +1,7 @@
 import babel from '@rollup/plugin-babel'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-// import styles from 'rollup-plugin-styles'
+import styles from 'rollup-plugin-styles'
 
 export default {
   external: ['vue'],
@@ -12,9 +12,9 @@ export default {
   ],
   plugins: [
     nodeResolve({ preferBuiltins: false }),
-    // styles({
-    //   mode: ['inject', { singleTag: true }]
-    // }),
+    styles({
+      mode: ['inject', { singleTag: true }]
+    }),
     commonjs({
       include: /node_modules/
     }),
