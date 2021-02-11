@@ -36,7 +36,7 @@ function Monterey({
   const formRadius = `${borderRadius}px`
 
   return (
-    <>
+    <div>
       {!hideWarnings && !ALLOWED_FORMATS.includes(format) ? <Warning message="This template is not available for the chosen format" /> : null}
       <form action={action} className={`seva-form formkit-form monterey ${className}`} target={newTab ? '_blank' : '_self'} method="post" data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(243 246 249)', borderRadius: formRadius }}>
         <div data-style="image">
@@ -52,12 +52,12 @@ function Monterey({
             <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert" />
             <div data-element="fields" className="seva-fields formkit-fields">
               {!hideName && (
-                <>
+                <div>
                   {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
                   <div className="formkit-field">
                     <input className="formkit-input" name="fields[first_name]" aria-label={nameLabel} placeholder={namePlaceholder} type="text" style={{ color: 'rgb(77 77 77)', borderColor: 'rgb(227 227 227)', borderRadius: 0, fontWeight: 400 }} id="ck-first-name" />
                   </div>
-                </>
+                </div>
               )}
               {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
               <div className="formkit-field">
@@ -78,7 +78,7 @@ function Monterey({
           </div>
         </div>
       </form>
-    </>
+    </div>
   )
 }
 

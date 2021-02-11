@@ -35,7 +35,7 @@ function Rainier({
   const bgColor = backgroundColor.join(' ').concat(`/${backgroundOpacity}`)
 
   return (
-    <>
+    <div>
       {!hideWarnings && !ALLOWED_FORMATS.includes(format) ? <Warning message="This template is not available for the chosen format" /> : null}
       <form action={action} className={`seva-form formkit-form rainier ${className}`} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800">
         <div className="formkit-container" data-style="full" style={{ backgroundColor: 'rgb(255 255 255)' }}>
@@ -53,12 +53,12 @@ function Rainier({
             <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
             <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
               {!hideName && (
-                <>
+                <div>
                   {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
                   <div className="formkit-field">
                     <input className="formkit-input" aria-label={nameLabel} name="fields[first_name]" placeholder={namePlaceholder} type="text" style={{ color: 'rgb(146 146 146)', borderColor: 'rgb(228 231 234)', borderRadius: 0, fontWeight: 400 }} id="ck-first-name" />
                   </div>
-                </>
+                </div>
               )}
               {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
               <div className="formkit-field">
@@ -79,7 +79,7 @@ function Rainier({
           </div>
         </div>
       </form>
-    </>
+    </div>
   )
 }
 

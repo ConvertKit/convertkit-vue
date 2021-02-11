@@ -23,7 +23,7 @@ function Clare({
 }) {
 
   return (
-    <>
+    <div>
       {!hideWarnings && !ALLOWED_FORMATS.includes(format) ? <Warning message="This template is not available for the chosen format" /> : null}
       <form action={action} method="post" target={newTab ? '_blank' : '_self'} className={`seva-form formkit-form clare ${className}`} method="post" data-sv-form={formId} data-format={format} data-version={options.version} data-uid={options.uid} data-options={JSON.stringify(options)} min-width="400 500 600 700 800">
         <div data-style="clean">
@@ -31,12 +31,12 @@ function Clare({
           </ul>
           <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
             {!hideName && (
-              <>
+              <div>
                 {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
                 <div className="formkit-field">
                   <input className="formkit-input" aria-label={nameLabel} name="fields[first_name]" placeholder={namePlaceholder} type="text" style={{ color: 'rgb(0, 0, 0)', borderColor: 'rgb(227, 227, 227)', borderRadius: '4px', fontWeight: 400 }} id="ck-first-name" />
                 </div>
-              </>
+              </div>
             )}
             {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
             <div className="formkit-field">
@@ -54,7 +54,7 @@ function Clare({
           ) : null}
         </div>
       </form>
-    </>
+    </div>
   )
 }
 

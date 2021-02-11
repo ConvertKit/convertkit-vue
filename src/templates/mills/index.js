@@ -30,7 +30,7 @@ function Mills({
 }) {
 
   return (
-    <>
+    <div>
       {!hideWarnings && !ALLOWED_FORMATS.includes(format) ? <Warning message="This template is not available for the chosen format" /> : null}
       <form action={action} className={`seva-form formkit-form mills ${className}`} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(249 250 251)', borderRadius: '4px' }}>
         <div className="formkit-background" style={{ opacity: 0.2 }}></div>
@@ -44,12 +44,12 @@ function Mills({
           <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
           <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
             {!hideName && (
-              <>
+              <div>
                 {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
                 <div className="formkit-field">
                   <input className="formkit-input" aria-label={nameLabel} name="fields[first_name]" placeholder={namePlaceholder} type="text" style={{ color: 'rgb(0 0 0)', borderColor: 'rgb(227 227 227)', borderRadius: '4px', fontWeight: 400 }} id="ck-first-name" />
                 </div>
-              </>
+              </div>
             )}
             {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
             <div className="formkit-field">
@@ -72,7 +72,7 @@ function Mills({
           ) : null}
         </div>
       </form>
-    </>
+    </div>
   )
 }
 
