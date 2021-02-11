@@ -119,7 +119,8 @@ const SampleTemplate = {
   functional: true,
   render: (h, context) => {
     console.log({
-      context
+      props: context.props,
+      data: context.data
     });
     return h("div", [h("h1", ["Sample Template"]), h("form", {
       "attrs": {

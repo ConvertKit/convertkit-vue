@@ -85,7 +85,7 @@ const options = {
 // }
 
 const SampleTemplate = (context) => {
-  console.log({ context })
+  console.log({ props: context.props, data: context.data })
   return (
     <div>
       <h1>Sample Template</h1>
