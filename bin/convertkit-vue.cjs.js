@@ -1,16 +1,21 @@
 'use strict';
 
-var vue = require('vue');
-
-const ConvertKitForm = ({
-  formId
-}) => {
-  const action = `https://app.convertkit.com/forms/${formId}/subscriptions`;
-  return vue.createVNode("form", {
-    "action": action
-  }, [vue.createVNode("label", null, [vue.createTextVNode("Email")]), vue.createVNode("input", {
-    "type": "email"
-  }, null)]);
+const ConvertKitForm = {
+  functional: true,
+  render: (h, {
+    formId
+  }) => {
+    const action = `https://app.convertkit.com/forms/${formId}/subscriptions`;
+    return h("form", {
+      "attrs": {
+        "action": action
+      }
+    }, [h("label", ["Email"]), h("input", {
+      "attrs": {
+        "type": "email"
+      }
+    })]);
+  }
 };
 
 module.exports = ConvertKitForm;
