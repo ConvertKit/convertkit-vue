@@ -13,7 +13,7 @@ export default {
   plugins: [
     nodeResolve({ preferBuiltins: false }),
     styles({
-      mode: ['inject', { singleTag: true }]
+      mode: ['extract', 'convertkit-vue.css']
     }),
     commonjs({
       include: /node_modules/
