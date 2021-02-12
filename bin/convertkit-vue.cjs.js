@@ -179,11 +179,8 @@ const ConvertKitForm = {
   }) => {
     const action = `https://app.convertkit.com/forms/${props.formId}/subscriptions`;
     return h(Form, {
-      "directives": [{
-        name: "bind",
-        value: props
-      }],
       "attrs": {
+        "formId": props.formId,
         "action": action
       }
     });
