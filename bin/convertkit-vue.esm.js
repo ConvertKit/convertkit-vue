@@ -152,9 +152,7 @@ function formFormat(format) {
   }
 }
 
-function Form({
-  context
-}) {
+function Form(context) {
   console.log({
     context
   });
@@ -177,9 +175,6 @@ const ConvertKitForm = {
     props
   }) => {
     const action = `https://app.convertkit.com/forms/${props.formId}/subscriptions`;
-    console.log({
-      props
-    });
     return h(Form, {
       "directives": [{
         name: "bind",
