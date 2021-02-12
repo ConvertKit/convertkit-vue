@@ -10,28 +10,29 @@ const DefaultContent = () => (
   <p>Subscribe to get our latest content by email.</p>
 )
 
-function Monterey({
-  action,
-  formId,
-  options,
-  hideName = true,
-  showLabels = false,
-  newTab = false,
-  hideWarnings = false,
-  className = '',
-  submitText = 'Subscribe',
-  emailPlaceholder = 'Email Address',
-  namePlaceholder = 'First Name',
-  nameLabel = 'First name',
-  emailLabel = 'Email',
-  format = 'inline',
-  backgroundImage = bgImage,
-  backgroundOpacity = 0.7,
-  backgroundColor = [51, 51, 51],
-  borderRadius = 0,
-  headingText = 'Join the newsletter',
-  children = <DefaultContent />
-}) {
+const Monterey = ({ props }) => {
+  const {
+    action,
+    formId,
+    options,
+    hideName = true,
+    showLabels = false,
+    newTab = false,
+    hideWarnings = false,
+    className = '',
+    submitText = 'Subscribe',
+    emailPlaceholder = 'Email Address',
+    namePlaceholder = 'First Name',
+    nameLabel = 'First name',
+    emailLabel = 'Email',
+    format = 'inline',
+    backgroundImage = bgImage,
+    backgroundOpacity = 0.7,
+    backgroundColor = [51, 51, 51],
+    borderRadius = 0,
+    headingText = 'Join the newsletter',
+    children = <DefaultContent />
+  } = props
   const bgColor = backgroundColor.join(' ').concat(`/${backgroundOpacity}`)
   const formRadius = `${borderRadius}px`
 

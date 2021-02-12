@@ -10,28 +10,29 @@ const DefaultContent = () => (
   <p>Subscribe to get our latest content by email.</p>
 )
 
-function Powell({
-  action,
-  formId,
-  options,
-  hideName = true,
-  showLabels = false,
-  newTab = false,
-  hideWarnings = false,
-  className = '',
-  submitText = 'Subscribe',
-  emailPlaceholder = 'Email Address',
-  namePlaceholder = 'First Name',
-  nameLabel = 'First name',
-  emailLabel = 'Email',
-  format = 'inline',
-  backgroundImage = bgImage,
-  backgroundOpacity = 0.8,
-  backgroundColor = [251,105,112],
-  headingText = 'Join the newsletter',
-  disclaimerText = "We won't send you spam. Unsubscribe at any time.",
-  children = <DefaultContent />
-}) {
+const Powell = ({ props }) => {
+  const {
+    action,
+    formId,
+    options,
+    hideName = true,
+    showLabels = false,
+    newTab = false,
+    hideWarnings = false,
+    className = '',
+    submitText = 'Subscribe',
+    emailPlaceholder = 'Email Address',
+    namePlaceholder = 'First Name',
+    nameLabel = 'First name',
+    emailLabel = 'Email',
+    format = 'inline',
+    backgroundImage = bgImage,
+    backgroundOpacity = 0.8,
+    backgroundColor = [251,105,112],
+    headingText = 'Join the newsletter',
+    disclaimerText = "We won't send you spam. Unsubscribe at any time.",
+    children = <DefaultContent />
+  } = props
   const bgColor = backgroundColor.join(' ').concat(`/${backgroundOpacity}`)
 
   return (

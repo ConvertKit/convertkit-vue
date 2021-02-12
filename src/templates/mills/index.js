@@ -8,26 +8,27 @@ const DefaultContent = () => (
   <p>Subscribe to get our latest content by email.</p>
 )
 
-function Mills({
-  action,
-  formId,
-  options,
-  hideName = true,
-  showLabels = false,
-  newTab = false,
-  hideWarnings = false,
-  stacked = false,
-  className = '',
-  submitText = 'Subscribe',
-  disclaimerText = "We won't send you spam. Unsubscribe at any time.",
-  emailPlaceholder = 'Email Address',
-  namePlaceholder = 'First Name',
-  nameLabel = 'First name',
-  emailLabel = 'Email',
-  format = 'inline',
-  headingText = 'Join the Newsletter',
-  children = <DefaultContent />
-}) {
+const Mills = ({ props }) => {
+  const {
+    action,
+    formId,
+    options,
+    hideName = true,
+    showLabels = false,
+    newTab = false,
+    hideWarnings = false,
+    stacked = false,
+    className = '',
+    submitText = 'Subscribe',
+    disclaimerText = "We won't send you spam. Unsubscribe at any time.",
+    emailPlaceholder = 'Email Address',
+    namePlaceholder = 'First Name',
+    nameLabel = 'First name',
+    emailLabel = 'Email',
+    format = 'inline',
+    headingText = 'Join the Newsletter',
+    children = <DefaultContent />
+  } = props
 
   return (
     <div>

@@ -6,25 +6,26 @@ const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
 const bgImage = '//pages.convertkit.com/assets/charlotte/bg.jpg'
 
-function Charlotte({
-  action,
-  formId,
-  options,
-  hideName = true,
-  showLabels = false,
-  newTab = false,
-  hideWarnings = false,
-  className = '',
-  submitText = 'Send me the guide',
-  disclaimerText = 'We respect your privacy. Unsubscribe at any time.',
-  emailPlaceholder = 'Your email',
-  namePlaceholder = 'Your first name',
-  nameLabel = 'First name',
-  emailLabel = 'Email',
-  headingText = 'Get our how to guide',
-  format = 'inline',
-  backgroundImage = bgImage,
-}) {
+const Charlotte = ({ props }) => {
+  const {
+    action,
+    formId,
+    options,
+    hideName = true,
+    showLabels = false,
+    newTab = false,
+    hideWarnings = false,
+    className = '',
+    submitText = 'Send me the guide',
+    disclaimerText = 'We respect your privacy. Unsubscribe at any time.',
+    emailPlaceholder = 'Your email',
+    namePlaceholder = 'Your first name',
+    nameLabel = 'First name',
+    emailLabel = 'Email',
+    headingText = 'Get our how to guide',
+    format = 'inline',
+    backgroundImage = bgImage,
+  } = props
 
   return (
     <div>

@@ -1,13 +1,13 @@
-// import Minimal from './templates/minimal'
-// import Charlotte from './templates/charlotte'
-// import Clare from './templates/clare'
-// import Cocoa from './templates/cocoa'
-// import Mills from './templates/mills'
-// import Monterey from './templates/monterey'
-// import Pine from './templates/pine'
-// import Poplar from './templates/poplar'
-// import Powell from './templates/powell'
-// import Rainier from './templates/rainier'
+import Minimal from './templates/minimal'
+import Charlotte from './templates/charlotte'
+import Clare from './templates/clare'
+import Cocoa from './templates/cocoa'
+import Mills from './templates/mills'
+import Monterey from './templates/monterey'
+import Pine from './templates/pine'
+import Poplar from './templates/poplar'
+import Powell from './templates/powell'
+import Rainier from './templates/rainier'
 
 const options = {
   settings: {
@@ -61,28 +61,28 @@ const options = {
   version: '5'
 }
 
-// const renderTemplate = template => {
-//   const templateName = template.toLowerCase()
-//   const allTemplates = {
-//     minimal: Minimal,
-//     charlotte: Charlotte,
-//     clare: Clare,
-//     cocoa: Cocoa,
-//     mills: Mills,
-//     monterey: Monterey,
-//     pine: Pine,
-//     poplar: Poplar,
-//     powell: Powell,
-//     rainier: Rainier,
-//   }
+const renderTemplate = template => {
+  const templateName = template.toLowerCase()
+  const allTemplates = {
+    minimal: Minimal,
+    charlotte: Charlotte,
+    clare: Clare,
+    cocoa: Cocoa,
+    mills: Mills,
+    monterey: Monterey,
+    pine: Pine,
+    poplar: Poplar,
+    powell: Powell,
+    rainier: Rainier,
+  }
 
-//   if (!allTemplates.hasOwnProperty(templateName)) {
-//     const errorMessage = `The chosen template "${template}" is not yet supported`
-//     throw new ReferenceError(errorMessage)
-//   }
+  if (!allTemplates.hasOwnProperty(templateName)) {
+    const errorMessage = `The chosen template "${template}" is not yet supported`
+    throw new ReferenceError(errorMessage)
+  }
 
-//   return allTemplates[templateName]
-// }
+  return allTemplates[templateName]
+}
 
 const SampleTemplate = ({ props }) => {
   console.log({ props })
@@ -97,9 +97,9 @@ const SampleTemplate = ({ props }) => {
   )
 }
 
-const useTemplate = () => ({
+const useTemplate = (template) => ({
   options,
-  Template: SampleTemplate
+  Template: renderTemplate(template)
 })
 
 export default useTemplate

@@ -13,28 +13,29 @@ const DefaultContent = () => (
   </p>
 )
 
-function Poplar({
-  action,
-  formId,
-  options,
-  hideName = true,
-  showLabels = false,
-  newTab = false,
-  hideWarnings = false,
-  stacked = false,
-  className = '',
-  submitText = 'Download',
-  disclaimerText = 'We respect your privacy. Unsubscribe at any time.',
-  emailPlaceholder = 'Email Address',
-  namePlaceholder = 'First Name',
-  nameLabel = 'First name',
-  emailLabel = 'Email',
-  format = 'inline',
-  children = <DefaultContent />,
-  backgroundImage = bgImage,
-  headingText = 'Learn how to take photos like a pro',
-  borderRadius = 5
-}) {
+const Poplar = ({ props }) => {
+  const {
+    action,
+    formId,
+    options,
+    hideName = true,
+    showLabels = false,
+    newTab = false,
+    hideWarnings = false,
+    stacked = false,
+    className = '',
+    submitText = 'Download',
+    disclaimerText = 'We respect your privacy. Unsubscribe at any time.',
+    emailPlaceholder = 'Email Address',
+    namePlaceholder = 'First Name',
+    nameLabel = 'First name',
+    emailLabel = 'Email',
+    format = 'inline',
+    children = <DefaultContent />,
+    backgroundImage = bgImage,
+    headingText = 'Learn how to take photos like a pro',
+    borderRadius = 5
+  } = props
   const formRadius = `${borderRadius}px`
 
   return (

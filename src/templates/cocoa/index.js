@@ -10,28 +10,29 @@ const DefaultContent = () => (
   <p>Subscribe below and we’ll notify you when the product is released.</p>
 )
 
-function Cocoa({
-  action,
-  formId,
-  options,
-  hideName = false,
-  showLabels = false,
-  newTab = false,
-  hideWarnings = false,
-  className = '',
-  submitText = 'Download',
-  disclaimerText = 'We respect your privacy. Unsubscribe at any time.',
-  emailPlaceholder = 'Your email',
-  namePlaceholder = 'Your first name',
-  nameLabel = 'First name',
-  emailLabel = 'Email',
-  format = 'inline',
-  backgroundImage = bgImage,
-  backgroundColor = [46,46,46],
-  borderRadius = 0,
-  headingText = 'Join the waitlist',
-  children = <DefaultContent />
-}) {
+const Cocoa = ({ props }) => {
+  const {
+    action,
+    formId,
+    options,
+    hideName = false,
+    showLabels = false,
+    newTab = false,
+    hideWarnings = false,
+    className = '',
+    submitText = 'Download',
+    disclaimerText = 'We respect your privacy. Unsubscribe at any time.',
+    emailPlaceholder = 'Your email',
+    namePlaceholder = 'Your first name',
+    nameLabel = 'First name',
+    emailLabel = 'Email',
+    format = 'inline',
+    backgroundImage = bgImage,
+    backgroundColor = [46,46,46],
+    borderRadius = 0,
+    headingText = 'Join the waitlist',
+    children = <DefaultContent />
+  } = props
   const bgColor = backgroundColor.join(' ')
   const formRadius = `${borderRadius}px`
 

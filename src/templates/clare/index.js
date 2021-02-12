@@ -4,23 +4,24 @@ import BuiltWithBadge from '../../BuiltWithBadge'
 
 const ALLOWED_FORMATS = ['inline', 'modal', 'slide in']
 
-function Clare({
-  action,
-  formId,
-  options,
-  hideName = false,
-  showLabels = false,
-  newTab = false,
-  hideWarnings = false,
-  stacked = false,
-  className = '',
-  submitText = 'Subscribe',
-  emailPlaceholder = 'Your email address',
-  namePlaceholder = 'Your first name',
-  nameLabel = 'First name',
-  emailLabel = 'Email',
-  format = 'inline',
-}) {
+const Clare = ({ props }) => {
+  const {
+    action,
+    formId,
+    options,
+    hideName = false,
+    showLabels = false,
+    newTab = false,
+    hideWarnings = false,
+    stacked = false,
+    className = '',
+    submitText = 'Subscribe',
+    emailPlaceholder = 'Your email address',
+    namePlaceholder = 'Your first name',
+    nameLabel = 'First name',
+    emailLabel = 'Email',
+    format = 'inline',
+  } = props
 
   return (
     <div>

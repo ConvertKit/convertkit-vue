@@ -10,28 +10,29 @@ const DefaultContent = () => (
   <p>Receive tips and tricks on how to travel the world</p>
 )
 
-function Rainier({
-  action,
-  formId,
-  options,
-  hideName = true,
-  showLabels = false,
-  newTab = false,
-  hideWarnings = false,
-  stacked = false,
-  className = '',
-  submitText = 'Send it my way!',
-  emailPlaceholder = 'Email Address',
-  namePlaceholder = 'First Name',
-  nameLabel = 'First name',
-  emailLabel = 'Email',
-  format = 'inline',
-  backgroundImage = bgImage,
-  backgroundOpacity = 0.8,
-  backgroundColor = [16,16,16],
-  headingText = 'Join the Newsletter',
-  children = <DefaultContent />
-}) {
+const Rainier = ({ props }) => {
+  const {
+    action,
+    formId,
+    options,
+    hideName = true,
+    showLabels = false,
+    newTab = false,
+    hideWarnings = false,
+    stacked = false,
+    className = '',
+    submitText = 'Send it my way!',
+    emailPlaceholder = 'Email Address',
+    namePlaceholder = 'First Name',
+    nameLabel = 'First name',
+    emailLabel = 'Email',
+    format = 'inline',
+    backgroundImage = bgImage,
+    backgroundOpacity = 0.8,
+    backgroundColor = [16,16,16],
+    headingText = 'Join the Newsletter',
+    children = <DefaultContent />
+  } = props
   const bgColor = backgroundColor.join(' ').concat(`/${backgroundOpacity}`)
 
   return (

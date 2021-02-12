@@ -8,27 +8,28 @@ const DefaultContent = () => (
   <p>Subscribe to get our latest content by email.</p>
 )
 
-function Pine({
-  action,
-  formId,
-  options,
-  hideName = true,
-  showLabels = false,
-  newTab = false,
-  hideWarnings = false,
-  className = '',
-  submitText = 'Subscribe',
-  disclaimerText = 'We respect your privacy. Unsubscribe at any time.',
-  emailPlaceholder = 'Email Address',
-  namePlaceholder = 'First Name',
-  nameLabel = 'First name',
-  emailLabel = 'Email',
-  format = 'inline',
-  backgroundImage = null,
-  thumbnailImage = null,
-  headingText = 'Join the Newsletter',
-  children = <DefaultContent />
-}) {
+const Pine = ({ props }) => {
+  const {
+    action,
+    formId,
+    options,
+    hideName = true,
+    showLabels = false,
+    newTab = false,
+    hideWarnings = false,
+    className = '',
+    submitText = 'Subscribe',
+    disclaimerText = 'We respect your privacy. Unsubscribe at any time.',
+    emailPlaceholder = 'Email Address',
+    namePlaceholder = 'First Name',
+    nameLabel = 'First name',
+    emailLabel = 'Email',
+    format = 'inline',
+    backgroundImage = null,
+    thumbnailImage = null,
+    headingText = 'Join the Newsletter',
+    children = <DefaultContent />
+  } = props
   const background = backgroundImage ? `linear-gradient(rgb(249 250 251/.8),rgb(249 250 251/.8)), url(${backgroundImage})` : 'rgb(249 250 251)'
 
   return (
