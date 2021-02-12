@@ -84,8 +84,8 @@ const options = {
 //   return allTemplates[templateName]
 // }
 
-const SampleTemplate = (context) => {
-  console.log({ props: context.props, data: context.data })
+const SampleTemplate = ({ props }) => {
+  console.log({ props })
   return (
     <div>
       <h1>Sample Template</h1>

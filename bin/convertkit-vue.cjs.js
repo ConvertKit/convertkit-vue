@@ -83,10 +83,11 @@ const options = {
 
 const SampleTemplate = {
   functional: true,
-  render: (h, context) => {
+  render: (h, {
+    props
+  }) => {
     console.log({
-      props: context.props,
-      data: context.data
+      props
     });
     return h("div", [h("h1", ["Sample Template"]), h("form", {
       "attrs": {
@@ -107,10 +108,11 @@ const useTemplate = () => ({
 
 const Form = {
   functional: true,
-  render: (h, context) => {
-    console.log({
-      context,
-      props: context?.props
+  render: (h, {
+    props
+  }) => {
+    console.log('Form', {
+      props
     });
     const {
       options,
@@ -132,9 +134,11 @@ const ConvertKitForm = {
   }) => {
     const action = `https://app.convertkit.com/forms/${props.formId}/subscriptions`;
     return h(Form, {
+      "props": { ...props
+      },
       "attrs": {
-        "formId": props.formId,
-        "action": action
+        "action": action,
+        "formId": props.formId
       }
     });
   }
