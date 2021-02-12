@@ -104,22 +104,36 @@ const useTemplate = () => ({
   Template: SampleTemplate
 });
 
+function formFormat(format) {
+  switch (format) {
+    case 'slidein':
+      return 'slide in';
+
+    case 'sticky':
+      return 'sticky bar';
+
+    default:
+      return format;
+  }
+}
+
 const Form = {
   functional: true,
   render: (h, {
     props
   }) => {
-    console.log('Form', {
-      props
-    });
+    const template = props.template || 'minimal';
+    const format = props.format || 'inline';
     const {
       options,
       Template
     } = useTemplate();
     return h(Template, {
+      "props": { ...props
+      },
       "attrs": {
         "options": options,
-        "format": "inline"
+        "format": formFormat(format)
       }
     });
   }

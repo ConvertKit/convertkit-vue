@@ -12,10 +12,10 @@ function formFormat(format) {
 }
 
 const Form = ({ props }) => {
-  console.log('Form', { props })
-  const template = 'minimal'
+  const template = props.template || 'minimal'
+  const format = props.format || 'inline'
   const { options, Template } = useTemplate(template)
-  return <Template options={options} format="inline" />
+  return <Template {...{ props }} options={options} format={formFormat(format)} />
 }
 
 export default Form
