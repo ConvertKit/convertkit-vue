@@ -154,7 +154,8 @@ function formFormat(format) {
 
 function Form(context) {
   console.log({
-    context
+    context,
+    props: context?.props
   });
   const template = props.template || 'minimal';
   const {
