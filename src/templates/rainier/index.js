@@ -54,12 +54,12 @@ const Rainier = ({ props }) => {
             <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
             <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
               {!hideName && (
-                <div>
+                <span>
                   {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
                   <div className="formkit-field">
                     <input className="formkit-input" aria-label={nameLabel} name="fields[first_name]" placeholder={namePlaceholder} type="text" style={{ color: 'rgb(146 146 146)', borderColor: 'rgb(228 231 234)', borderRadius: 0, fontWeight: 400 }} id="ck-first-name" />
                   </div>
-                </div>
+                </span>
               )}
               {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
               <div className="formkit-field">

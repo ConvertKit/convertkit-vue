@@ -17,10 +17,10 @@ const Minimal = ({ props }) => {
   return (
     <form action={action} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} className={className}>
       {!hideName && (
-        <div>
+        <span>
           {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
           <input type="text" name="fields[first_name]" placeholder={namePlaceholder} aria-label={nameLabel} id="ck-first-name" />
-        </div>
+        </span>
       )}
       {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
       <input type="email" name="email_address" placeholder={emailPlaceholder} aria-label={emailLabel} id="ck-email" />

@@ -32,12 +32,12 @@ const Clare = ({ props }) => {
           </ul>
           <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
             {!hideName && (
-              <div>
+              <span>
                 {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
                 <div className="formkit-field">
                   <input className="formkit-input" aria-label={nameLabel} name="fields[first_name]" placeholder={namePlaceholder} type="text" style={{ color: 'rgb(0, 0, 0)', borderColor: 'rgb(227, 227, 227)', borderRadius: '4px', fontWeight: 400 }} id="ck-first-name" />
                 </div>
-              </div>
+              </span>
             )}
             {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
             <div className="formkit-field">

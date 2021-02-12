@@ -53,12 +53,12 @@ const Poplar = ({ props }) => {
             <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert" />
             <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
               {!hideName && (
-                <div>
+                <span>
                   {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
                   <div className="formkit-field">
                     <input className="formkit-input" name="fields[first_name]" aria-label={nameLabel} placeholder={namePlaceholder} type="text" style={{ color: 'rgb(105 113 119)', backgroundColor: 'rgb(243 246 249)', borderRadius: '5px', fontWeight: 400 }} id="ck-first-name" />
                   </div>
-                </div>
+                </span>
               )}
               {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
               <div className="formkit-field">

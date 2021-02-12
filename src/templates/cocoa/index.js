@@ -51,12 +51,12 @@ const Cocoa = ({ props }) => {
             <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
             <div data-element="fields" className="seva-fields formkit-fields" style={{color: 'rgb(255 255 255)'}}>
               {!hideName && (
-                <div>
+                <span>
                   {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
                   <div className="formkit-field">
                     <input className="formkit-input" aria-label={nameLabel} name="fields[first_name]" placeholder={namePlaceholder} type="text" style={{color: 'rgb(105 113 119)', fontWeight: 400, backgroundColor: 'rgb(27 27 27)', borderRadius: '4px'}} id="ck-first-name" />
                   </div>
-                </div>
+                </span>
               )}
               {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
               <div className="formkit-field">

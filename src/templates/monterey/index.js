@@ -53,12 +53,12 @@ const Monterey = ({ props }) => {
             <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert" />
             <div data-element="fields" className="seva-fields formkit-fields">
               {!hideName && (
-                <div>
+                <span>
                   {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
                   <div className="formkit-field">
                     <input className="formkit-input" name="fields[first_name]" aria-label={nameLabel} placeholder={namePlaceholder} type="text" style={{ color: 'rgb(77 77 77)', borderColor: 'rgb(227 227 227)', borderRadius: 0, fontWeight: 400 }} id="ck-first-name" />
                   </div>
-                </div>
+                </span>
               )}
               {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
               <div className="formkit-field">
