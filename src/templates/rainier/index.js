@@ -38,35 +38,35 @@ const Rainier = ({ props }) => {
   return (
     <div>
       {!hideWarnings && !ALLOWED_FORMATS.includes(format) ? <Warning message="This template is not available for the chosen format" /> : null}
-      <form action={action} className={`seva-form formkit-form rainier ${className}`} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800">
-        <div className="formkit-container" data-style="full" style={{ backgroundColor: 'rgb(255 255 255)' }}>
-          <div className="formkit-hero">
-            <div className="formkit-hero-bg-color" style={{ backgroundImage: `linear-gradient(rgb(${bgColor}), rgb(${bgColor})), url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-            <div className="formkit-header" data-element="header" style={{ fontSize: '27px', fontWeight: 700, marginBottom: '20px', color: 'rgb(255 255 255)' }}>
+      <form action={action} class={`seva-form formkit-form rainier ${className}`} method="post" target={newTab ? '_blank' : '_self'} data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800">
+        <div class="formkit-container" data-style="full" style={{ backgroundColor: 'rgb(255 255 255)' }}>
+          <div class="formkit-hero">
+            <div class="formkit-hero-bg-color" style={{ backgroundImage: `linear-gradient(rgb(${bgColor}), rgb(${bgColor})), url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+            <div class="formkit-header" data-element="header" style={{ fontSize: '27px', fontWeight: 700, marginBottom: '20px', color: 'rgb(255 255 255)' }}>
               <h1>{headingText}</h1>
               <p>​</p>
             </div>
-            <div className="formkit-content" data-element="content" style={{ color: 'rgb(255 255 255)', fontSize: '18px', fontWeight: 400 }}>
+            <div class="formkit-content" data-element="content" style={{ color: 'rgb(255 255 255)', fontSize: '18px', fontWeight: 400 }}>
               {children}
             </div>
           </div>
           <div>
-            <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-            <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
+            <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+            <div data-element="fields" data-stacked={stacked} class="seva-fields formkit-fields">
               {!hideName && (
                 <span>
                   {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
-                  <div className="formkit-field">
-                    <input className="formkit-input" aria-label={nameLabel} name="fields[first_name]" placeholder={namePlaceholder} type="text" style={{ color: 'rgb(146 146 146)', borderColor: 'rgb(228 231 234)', borderRadius: 0, fontWeight: 400 }} id="ck-first-name" />
+                  <div class="formkit-field">
+                    <input class="formkit-input" aria-label={nameLabel} name="fields[first_name]" placeholder={namePlaceholder} type="text" style={{ color: 'rgb(146 146 146)', borderColor: 'rgb(228 231 234)', borderRadius: 0, fontWeight: 400 }} id="ck-first-name" />
                   </div>
                 </span>
               )}
               {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
-              <div className="formkit-field">
-                <input className="formkit-input" aria-label={emailLabel} name="email_address" placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(146 146 146)', borderColor: 'rgb(228 231 234)', borderRadius: 0, fontWeight: 400 }} id="ck-email" />
+              <div class="formkit-field">
+                <input class="formkit-input" aria-label={emailLabel} name="email_address" placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(146 146 146)', borderColor: 'rgb(228 231 234)', borderRadius: 0, fontWeight: 400 }} id="ck-email" />
               </div>
-              <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255 255 255)', backgroundColor: 'rgb(199 92 86)', borderRadius: 0, fontWeight: 700 }} type="submit">
-                <div className="formkit-spinner">
+              <button data-element="submit" class="formkit-submit formkit-submit" style={{ color: 'rgb(255 255 255)', backgroundColor: 'rgb(199 92 86)', borderRadius: 0, fontWeight: 700 }} type="submit">
+                <div class="formkit-spinner">
                   <div></div>
                   <div></div>
                   <div></div>

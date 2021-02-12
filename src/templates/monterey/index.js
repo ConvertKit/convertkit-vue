@@ -39,33 +39,33 @@ const Monterey = ({ props }) => {
   return (
     <div>
       {!hideWarnings && !ALLOWED_FORMATS.includes(format) ? <Warning message="This template is not available for the chosen format" /> : null}
-      <form action={action} className={`seva-form formkit-form monterey ${className}`} target={newTab ? '_blank' : '_self'} method="post" data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(243 246 249)', borderRadius: formRadius }}>
+      <form action={action} class={`seva-form formkit-form monterey ${className}`} target={newTab ? '_blank' : '_self'} method="post" data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(243 246 249)', borderRadius: formRadius }}>
         <div data-style="image">
-          <div data-element="column" className="formkit-column" style={{ backgroundImage: `linear-gradient(rgb(${bgColor}), rgb(${bgColor})), url(${backgroundImage})`, height: '480px' }}>
-            <div className="formkit-header" data-element="header" style={{ color: 'rgb(255 255 255)', fontSize: '36px', fontWeight: 700 }}>
+          <div data-element="column" class="formkit-column" style={{ backgroundImage: `linear-gradient(rgb(${bgColor}), rgb(${bgColor})), url(${backgroundImage})`, height: '480px' }}>
+            <div class="formkit-header" data-element="header" style={{ color: 'rgb(255 255 255)', fontSize: '36px', fontWeight: 700 }}>
               <h1>{headingText}</h1>
             </div>
-            <div className="formkit-subheader" data-element="subheader" style={{ color: 'rgb(255 255 255)', fontSize: '22px' }}>
+            <div class="formkit-subheader" data-element="subheader" style={{ color: 'rgb(255 255 255)', fontSize: '22px' }}>
               {children}
             </div>
           </div>
-          <div data-element="column" className="formkit-column">
-            <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert" />
-            <div data-element="fields" className="seva-fields formkit-fields">
+          <div data-element="column" class="formkit-column">
+            <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert" />
+            <div data-element="fields" class="seva-fields formkit-fields">
               {!hideName && (
                 <span>
                   {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
-                  <div className="formkit-field">
-                    <input className="formkit-input" name="fields[first_name]" aria-label={nameLabel} placeholder={namePlaceholder} type="text" style={{ color: 'rgb(77 77 77)', borderColor: 'rgb(227 227 227)', borderRadius: 0, fontWeight: 400 }} id="ck-first-name" />
+                  <div class="formkit-field">
+                    <input class="formkit-input" name="fields[first_name]" aria-label={nameLabel} placeholder={namePlaceholder} type="text" style={{ color: 'rgb(77 77 77)', borderColor: 'rgb(227 227 227)', borderRadius: 0, fontWeight: 400 }} id="ck-first-name" />
                   </div>
                 </span>
               )}
               {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
-              <div className="formkit-field">
-                <input className="formkit-input" name="email_address" aria-label={emailLabel} placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(77 77 77)', borderColor: 'rgb(227 227 227)', borderRadius: 0, fontWeight: 400 }} />
+              <div class="formkit-field">
+                <input class="formkit-input" name="email_address" aria-label={emailLabel} placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(77 77 77)', borderColor: 'rgb(227 227 227)', borderRadius: 0, fontWeight: 400 }} />
               </div>
-              <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255 255 255)', backgroundColor: 'rgb(51 51 51)', borderRadius: 0, fontWeight: 400 }}>
-                <div className="formkit-spinner">
+              <button data-element="submit" class="formkit-submit formkit-submit" style={{ color: 'rgb(255 255 255)', backgroundColor: 'rgb(51 51 51)', borderRadius: 0, fontWeight: 400 }}>
+                <div class="formkit-spinner">
                   <div></div>
                   <div></div>
                   <div></div>

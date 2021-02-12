@@ -41,31 +41,31 @@ const Poplar = ({ props }) => {
   return (
     <div>
       {!hideWarnings && !ALLOWED_FORMATS.includes(format) ? <Warning message="This template is not available for the chosen format" /> : null}
-      <form action={action} className={`seva-form formkit-form poplar ${className}`} target={newTab ? '_blank' : '_self'} method="post" data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(255 255 255)', borderRadius: '10px' }}>
+      <form action={action} class={`seva-form formkit-form poplar ${className}`} target={newTab ? '_blank' : '_self'} method="post" data-sv-form={formId} data-uid={options.uid} data-format={format} data-version={options.version} data-options={JSON.stringify(options)} min-width="400 500 600 700 800" style={{ backgroundColor: 'rgb(255 255 255)', borderRadius: '10px' }}>
         <div data-style="full" style={{ '--bg-border-radius': formRadius }}>
-          <div data-element="column" className="formkit-column">
-            <div className="formkit-header" data-element="header" style={{ color: 'rgb(55 63 69)', fontWeight: 700 }}>
+          <div data-element="column" class="formkit-column">
+            <div class="formkit-header" data-element="header" style={{ color: 'rgb(55 63 69)', fontWeight: 700 }}>
               <h1>{headingText}</h1>
             </div>
-            <div className="formkit-content" data-element="content" style={{ color: 'rgb(105 113 119)' }}>
+            <div class="formkit-content" data-element="content" style={{ color: 'rgb(105 113 119)' }}>
              {children}
             </div>
-            <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert" />
-            <div data-element="fields" data-stacked={stacked} className="seva-fields formkit-fields">
+            <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert" />
+            <div data-element="fields" data-stacked={stacked} class="seva-fields formkit-fields">
               {!hideName && (
                 <span>
                   {showLabels ? <label htmlFor="ck-first-name">{nameLabel}</label> : null}
-                  <div className="formkit-field">
-                    <input className="formkit-input" name="fields[first_name]" aria-label={nameLabel} placeholder={namePlaceholder} type="text" style={{ color: 'rgb(105 113 119)', backgroundColor: 'rgb(243 246 249)', borderRadius: '5px', fontWeight: 400 }} id="ck-first-name" />
+                  <div class="formkit-field">
+                    <input class="formkit-input" name="fields[first_name]" aria-label={nameLabel} placeholder={namePlaceholder} type="text" style={{ color: 'rgb(105 113 119)', backgroundColor: 'rgb(243 246 249)', borderRadius: '5px', fontWeight: 400 }} id="ck-first-name" />
                   </div>
                 </span>
               )}
               {showLabels ? <label htmlFor="ck-email">{emailLabel}</label> : null}
-              <div className="formkit-field">
-                <input className="formkit-input" name="email_address" aria-label={emailLabel} placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(105 113 119)', backgroundColor: 'rgb(243 246 249)', borderRadius: '5px', fontWeight: 400 }} />
+              <div class="formkit-field">
+                <input class="formkit-input" name="email_address" aria-label={emailLabel} placeholder={emailPlaceholder} required type="email" style={{ color: 'rgb(105 113 119)', backgroundColor: 'rgb(243 246 249)', borderRadius: '5px', fontWeight: 400 }} />
               </div>
-              <button data-element="submit" className="formkit-submit formkit-submit" style={{ color: 'rgb(255 255 255)', backgroundColor: 'rgb(120 94 223)', borderRadius: '5px', fontWeight: 700 }}>
-                <div className="formkit-spinner">
+              <button data-element="submit" class="formkit-submit formkit-submit" style={{ color: 'rgb(255 255 255)', backgroundColor: 'rgb(120 94 223)', borderRadius: '5px', fontWeight: 700 }}>
+                <div class="formkit-spinner">
                   <div></div>
                   <div></div>
                   <div></div>
@@ -73,14 +73,14 @@ const Poplar = ({ props }) => {
                 <span>{submitText}</span>
               </button>
             </div>
-            <div className="formkit-disclaimer" data-element="disclaimer" style={{ color: 'rgb(105 113 119)' }}>
+            <div class="formkit-disclaimer" data-element="disclaimer" style={{ color: 'rgb(105 113 119)' }}>
               {disclaimerText}
             </div>
             {options.settings.powered_by.show ? (
               <BuiltWithBadge href={options.settings.powered_by.url} />
             ) : null}
           </div>
-          <div data-element="column" className="formkit-background" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
+          <div data-element="column" class="formkit-background" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
         </div>
       </form>
     </div>
