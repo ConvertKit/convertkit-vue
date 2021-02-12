@@ -1,5 +1,5 @@
 import Minimal from './templates/minimal'
-// import Charlotte from './templates/charlotte'
+import Charlotte from './templates/charlotte'
 // import Clare from './templates/clare'
 // import Cocoa from './templates/cocoa'
 // import Mills from './templates/mills'
@@ -65,7 +65,7 @@ const renderTemplate = template => {
   const templateName = template.toLowerCase()
   const allTemplates = {
     minimal: Minimal,
-    // charlotte: Charlotte,
+    charlotte: Charlotte,
     // clare: Clare,
     // cocoa: Cocoa,
     // mills: Mills,
