@@ -21,10 +21,10 @@ yarn add convertkit-vue
 
 ## Demos
 
-### Vue 3
+#### Vue 3
 - [Using different templates](https://codesandbox.io/s/cranky-stallman-ejvwp)
 
-### Vue 2
+#### Vue 2
 - [Using different templates](https://codesandbox.io/s/xenodochial-wiles-k8kk9)
 
 ## Usage
