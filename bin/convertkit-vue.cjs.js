@@ -155,12 +155,10 @@ function formFormat(format) {
 }
 
 function Form({
-  props,
-  ...context
+  context
 }) {
   console.log({
-    context,
-    props
+    context
   });
   const template = props.template || 'minimal';
   const {
@@ -181,11 +179,18 @@ const ConvertKitForm = {
     props
   }) => {
     const action = `https://app.convertkit.com/forms/${props.formId}/subscriptions`;
-    return h(Form, helper([{}, props, {
+    console.log({
+      props
+    });
+    return h(Form, {
+      "directives": [{
+        name: "bind",
+        value: props
+      }],
       "attrs": {
         "action": action
       }
-    }]));
+    });
   }
 };
 

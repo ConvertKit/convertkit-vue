@@ -11,8 +11,8 @@ function formFormat(format) {
   }
 }
 
-function Form({ props, ...context }) {
-  console.log({ context, props })
+function Form({ context }) {
+  console.log({ context })
   const template = props.template || 'minimal'
   const { options, Template } = useTemplate(template)
   return <Template {...props} options={options} format={formFormat(props.format)} />
