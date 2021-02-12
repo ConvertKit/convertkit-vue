@@ -1,13 +1,13 @@
 import Minimal from './templates/minimal'
-import Charlotte from './templates/charlotte'
-import Clare from './templates/clare'
-import Cocoa from './templates/cocoa'
-import Mills from './templates/mills'
-import Monterey from './templates/monterey'
-import Pine from './templates/pine'
-import Poplar from './templates/poplar'
-import Powell from './templates/powell'
-import Rainier from './templates/rainier'
+// import Charlotte from './templates/charlotte'
+// import Clare from './templates/clare'
+// import Cocoa from './templates/cocoa'
+// import Mills from './templates/mills'
+// import Monterey from './templates/monterey'
+// import Pine from './templates/pine'
+// import Poplar from './templates/poplar'
+// import Powell from './templates/powell'
+// import Rainier from './templates/rainier'
 
 const options = {
   settings: {
@@ -65,15 +65,15 @@ const renderTemplate = template => {
   const templateName = template.toLowerCase()
   const allTemplates = {
     minimal: Minimal,
-    charlotte: Charlotte,
-    clare: Clare,
-    cocoa: Cocoa,
-    mills: Mills,
-    monterey: Monterey,
-    pine: Pine,
-    poplar: Poplar,
-    powell: Powell,
-    rainier: Rainier,
+    // charlotte: Charlotte,
+    // clare: Clare,
+    // cocoa: Cocoa,
+    // mills: Mills,
+    // monterey: Monterey,
+    // pine: Pine,
+    // poplar: Poplar,
+    // powell: Powell,
+    // rainier: Rainier,
   }
 
   if (!allTemplates.hasOwnProperty(templateName)) {
@@ -84,22 +84,12 @@ const renderTemplate = template => {
   return allTemplates[templateName]
 }
 
-const SampleTemplate = ({ props }) => {
-  console.log({ props })
-  return (
-    <div>
-      <h1>Sample Template</h1>
-      <form action>
-        <label>Email</label>
-        <input type="email" />
-      </form>
-    </div>
-  )
+const useTemplate = (template) => {
+  console.log({ template })
+  return {
+    options,
+    Template: renderTemplate(template)
+  }
 }
-
-const useTemplate = (template) => ({
-  options,
-  Template: renderTemplate(template)
-})
 
 export default useTemplate
