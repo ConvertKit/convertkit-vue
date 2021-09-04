@@ -4,9 +4,10 @@
   <p>Easily plug convertkit forms to your Vue websites.</p>
 </div>
 
-
-
 Using React? Try [ConvertKit-React](https://npm.im/convertkit-react)
+
+Using Svelte? Try [ConvertKit-Svelte](https://github.com/ConvertKit/convertkit-svelte)
+
 ## Setup
 
 For Vue 3:
